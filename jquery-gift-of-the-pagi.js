@@ -32,12 +32,12 @@
       $element.after(paginationControls);
       $activeItem.addClass('pagi-active-paginated-item');
 
-      $('.prev-paginate a').on('click', function(e) {
+      $element.find('.prev-paginate a').on('click', function(e) {
         e.preventDefault();
         paginateToPreviousItem();
       });
 
-      $('.next-paginate a').on('click', function(e) {
+      $element.find('.next-paginate a').on('click', function(e) {
         e.preventDefault();
         paginateToNextItem();
       });
