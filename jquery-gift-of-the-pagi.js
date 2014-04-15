@@ -3,6 +3,8 @@
 
     // Some defaults
     var defaults = {
+      prevButtonText: 'Prev',
+      nextButtonText: 'Next'
     };
 
     // Merge runtime options with defaults
@@ -17,8 +19,10 @@
     };
 
     var paginationControls = '<ul class="pagi-pagination-controls">' +
-        '<li class="prev-paginate"><a class="btn btn-default" href="#">Prev</a></li>' +
-        '<li class="next-paginate"><a class="btn btn-default" href="#">Next</a></li>' +
+        '<li class="prev-paginate"><a class="btn btn-default" href="#">' +
+          options.prevButtonText + '</a></li>' +
+        '<li class="next-paginate"><a class="btn btn-default" href="#">' +
+          options.nextButtonText + '</a></li>' +
       '</ul>';
 
     return this.each(function() {
@@ -32,12 +36,16 @@
       $element.after(paginationControls);
       $activeItem.addClass('pagi-active-paginated-item');
 
-      $element.find('.prev-paginate a').on('click', function(e) {
+      $element
+        .next('.pagi-pagination-controls')
+        .find('.prev-paginate a').on('click', function(e) {
         e.preventDefault();
         paginateToPreviousItem();
       });
 
-      $element.find('.next-paginate a').on('click', function(e) {
+      $element
+        .next('.pagi-pagination-controls')
+        .find('.next-paginate a').on('click', function(e) {
         e.preventDefault();
         paginateToNextItem();
       });

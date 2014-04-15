@@ -1,3 +1,7 @@
+.pagi-paginated-prev-next {
+  padding: 0;
+  margin-bottom: 20px;
+}
 .pagi-paginated-prev-next>li {
   display: none;
 }
