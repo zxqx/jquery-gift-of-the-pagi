@@ -1,0 +1,14 @@
+.pagi-paginated-prev-next>li {
+  display: none;
+}
+.pagi-paginated-prev-next>li.pagi-active-paginated-item {
+  display: block;
+}
+.pagi-pagination-controls {
+  padding: 0;
+  list-style: none;
+}
+.pagi-pagination-controls li {
+  margin-right: 10px;
+  display: inline-block;
+}

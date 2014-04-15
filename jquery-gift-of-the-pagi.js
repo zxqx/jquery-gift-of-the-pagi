@@ -16,7 +16,7 @@
     {
     };
 
-    var paginationControls = '<ul class="pagination-controls">' +
+    var paginationControls = '<ul class="pagi-pagination-controls">' +
         '<li class="prev-paginate"><a class="btn btn-default" href="#">Prev</a></li>' +
         '<li class="next-paginate"><a class="btn btn-default" href="#">Next</a></li>' +
       '</ul>';
@@ -26,11 +26,11 @@
       var $items      = $element.children('li');
       var $activeItem = $items.first();
 
-      $element.addClass('paginated-prev-next');
+      $element.addClass('pagi-paginated-prev-next');
 
-      $element.next('.pagination-controls').remove();
+      $element.next('.pagi-pagination-controls').remove();
       $element.after(paginationControls);
-      $activeItem.addClass('active-paginated-item');
+      $activeItem.addClass('pagi-active-paginated-item');
 
       $('.prev-paginate a').on('click', function(e) {
         e.preventDefault();
@@ -44,26 +44,26 @@
 
       function paginateToPreviousItem()
       {
-        $activeItem.removeClass('active-paginated-item');
+        $activeItem.removeClass('pagi-active-paginated-item');
 
         if ($activeItem.prev().length)
           $activeItem = $activeItem.prev();
         else
           $activeItem = $items.last();
 
-        $activeItem.addClass('active-paginated-item');
+        $activeItem.addClass('pagi-active-paginated-item');
       }
 
       function paginateToNextItem()
       {
-        $activeItem.removeClass('active-paginated-item');
+        $activeItem.removeClass('pagi-active-paginated-item');
 
         if ($activeItem.next().length)
           $activeItem = $activeItem.next();
         else
           $activeItem = $items.first();
         
-        $activeItem.addClass('active-paginated-item');
+        $activeItem.addClass('pagi-active-paginated-item');
       }
 
     });
