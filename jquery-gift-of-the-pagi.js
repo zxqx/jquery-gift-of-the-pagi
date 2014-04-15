@@ -23,11 +23,12 @@
 
     return this.each(function() {
       var $element    = $(this);
-      var $items      = $element.children('li:visible');
+      var $items      = $element.children('li');
       var $activeItem = $items.first();
 
       $element.addClass('paginated-prev-next');
 
+      $element.next('.pagination-controls').remove();
       $element.after(paginationControls);
       $activeItem.addClass('active-paginated-item');
 
@@ -69,5 +70,6 @@
   };
 
 })(jQuery);
+
 
 
