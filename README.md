@@ -7,6 +7,8 @@ Depends on:
 * jQuery
 * Bootstrap 3
 
+[See demo](https://dl.dropboxusercontent.com/u/21334841/demos/jquery-gift-of-the-pagi/demo.html).
+
 ## Installation
 
 can be installed via npm:
