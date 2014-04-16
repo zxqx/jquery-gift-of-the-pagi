@@ -2,11 +2,23 @@
   "name": "jquery-gift-of-the-pagi",
   "version": "0.1.5",
   "description": "A clean prev/next paginator to be used with Bootstrap 3",
+  "keywords": [
+    "pagination",
+    "paging",
+    "prev next",
+    "previous next",
+    "jquery",
+    "bootstrap",
+    "bootstrap pagination"
+  ],
   "main": "jquery-gift-of-the-pagi.js",
   "author": "Zak Angelle",
   "repository": {
     "type": "git",
     "url": "git@github.com:zakangelle/jquery-gift-of-the-pagi.git"
   },
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "2.1.0"
+  }
 }
