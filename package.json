@@ -1,6 +1,6 @@
 {
   "name": "jquery-gift-of-the-pagi",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A clean prev/next paginator to be used with Bootstrap 3",
   "keywords": [
     "pagination",
