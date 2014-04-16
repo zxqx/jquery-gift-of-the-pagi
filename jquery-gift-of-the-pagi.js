@@ -1,15 +1,27 @@
-(function($) {
+(function (factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    // Node/CommonJS
+    factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+}(function($) {
   $.fn.giftOfThePagi = function(options) {
 
     // Some defaults
-    var defaults = {
+    var DEFAULTS = {
       prevButtonText: 'Prev',
       nextButtonText: 'Next'
     };
 
     // Merge runtime options with defaults
-    options = $.extend({}, defaults, options);
+    options = $.extend({}, DEFAULTS, options);
 
+    // Placeholders for exported methods
     $.fn.giftOfThePagi.goToPreviousItem = function()
     {
     };
@@ -18,7 +30,7 @@
     {
     };
 
-    var paginationControls = '<ul class="pagi-pagination-controls">' +
+    var PAGINATION_CONTROLS = '<ul class="pagi-pagination-controls">' +
         '<li class="prev-paginate"><a class="btn btn-default" href="#">' +
           options.prevButtonText + '</a></li>' +
         '<li class="next-paginate"><a class="btn btn-default" href="#">' +
@@ -33,7 +45,7 @@
       $element.addClass('pagi-paginated-prev-next');
 
       $element.next('.pagi-pagination-controls').remove();
-      $element.after(paginationControls);
+      $element.after(PAGINATION_CONTROLS);
       $activeItem.addClass('pagi-active-paginated-item');
 
       $element
@@ -77,7 +89,7 @@
     });
   };
 
-})(jQuery);
+}));
 
 
 
