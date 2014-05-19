@@ -20,7 +20,7 @@ npm install jquery-gift-of-the-pagi
 or alternatively just cloned via git:
 
 ```
-git clone git@github.com:zakangelle/jquery-gift-of-the-pagi.git
+git clone https://github.com/zakangelle/jquery-gift-of-the-pagi.git
 ```
 
 can be used as a CommonJS module:
